@@ -10,7 +10,9 @@ class AdminController < ApplicationController
 
   def comments; end
 
-  def users; end
+  def users
+    @users = User.all
+    end
 
 
   def show_post
