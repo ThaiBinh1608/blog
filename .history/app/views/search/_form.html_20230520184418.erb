@@ -1,0 +1,8 @@
+<%= search_form_for()) do |f| %>
+  <%= f.search_field :title_or_content_body_or_user_email_or_user_first_name_or_user_last_name_i_cont,
+   placeholder: "Search...",
+   class: "form-control me-2" %>
+  <%= f.submit "Search!", class:"btn btn-outline-success" %>
+<% end %>
+
+

@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+<div class="container">
+  <h1>Posts</h1>
+  <div id="posts" >
+    <% @posts.each do |post| %>
+    <div class = "col-4">
+     <h4><%= post.title %></h4>
+      <h6>posted by <%= link_to post.user.full_name, user_path(post.user) %></h6>
+      <p >
+        <%= link_to "Show this post", post,class:"btn btn-primary" %>
+      </p>
+    <% end %>
+    <div>
+  </div>
+  <%= link_to "New post", new_post_path ,class:"btn btn-primary"%>
+</div>

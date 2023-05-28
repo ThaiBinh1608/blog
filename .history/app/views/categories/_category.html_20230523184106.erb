@@ -1,0 +1,16 @@
+<div id="<%= dom_id category %>">
+  <h2>
+    <% target = action_name.eql?("show") ? categories_path : category %>
+    <%=  category.name, target %>
+  </h2>
+  <div class ="row ">
+  <% category.posts.includes(:user).each do |post| %>
+    <div class = "col-2 card">
+         <h4><%= post.title %></h4>
+         <h6>posted by <%= link_to post.user.full_name, user_path(post.user) %></h6>
+           <p><%= link_to "Show this post", post,class:"btn btn-primary" %> </p>
+      </div>
+      
+  <% end %>
+    </div>
+</div>

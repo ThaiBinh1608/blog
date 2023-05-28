@@ -1,0 +1,18 @@
+<div id="<%= dom_id project %>">
+<div class="container">
+      <div class="row">
+          <div class="col-12">
+            <h2><%= project.title %></h2>
+            <span>Link: <%= link_to project.link %><span>
+               <p >
+                <%= link_to "Show this project", project,if current_user.admin?,class:"btn btn-primary" %>
+               </p>
+    </div>
+    <hr/>
+    <div class="col-12">
+        <%= project.body %>
+      </div>
+ 
+
+</div>
+</div>

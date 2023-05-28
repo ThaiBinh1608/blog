@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Projects</h1>
+<p> Đây là trang chứa dự án </p>
+
+<div id="projects">
+  <% @projects.each do |project| %>
+    <%= render project %>
+  <% end %>
+</div>
+
+

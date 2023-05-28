@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Projects</h1>
+<p> Đây là trang chứa dự án </p>
+
+<div id="projects" class="container card">
+  <% @projects.each do |project| %>
+  <div class=" row">
+      <h5 class="col-4"><%=project.title%></h5>
+      <div class="col-8">
+        <%= link_to "Show this project", project ,class:"btn btn-primary" %>
+      </div>
+      <div><%= project.body %></div>
+    </div>
+  <% end %>
+</div>
+
+

@@ -1,0 +1,18 @@
+<div id="<%= dom_id post %>">
+<div class="c">
+    <table class="table border">
+    <thead>
+      <tr>
+        <th><h2><%= post.title %></h2></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><h5 class="dis"><%= @post.body %></h5></td>     
+        </tr>
+    </tbody>
+  </table>
+      <h6>posted by <%= link_to post.user.full_name, user_path(post.user) %></h6>
+      <h6><%= pluralize(post.views, "view") %></h6>
+  </div>
+</div>

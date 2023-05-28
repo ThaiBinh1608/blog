@@ -1,0 +1,9 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @project %>
+
+<div>
+  <%= link_to "Edit this post",edit_project_path(@project),class:"btn  btn-warning m-2"  if current_user&.admin? %>
+  <%= link_to "Back to posts", projects_path ,class:"btn btn-primary m-2"%>
+  <%= button_to "Destroy this project", @project, method: :delete  if current_user&.admin? %>
+</div>

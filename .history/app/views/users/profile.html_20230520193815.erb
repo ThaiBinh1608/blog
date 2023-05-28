@@ -1,0 +1,31 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-4">
+      <%= image_tag(@user.avatar, style:"width:150px; height: 150px; border-radius:100%") if @user.avatar.attached? %>
+    </div>
+    <div class="col-8">
+      <h1><%= @user.full_name %></h1>
+      <h6>
+        <%= pluralize(@user.comments.size, "Comment") %> | 
+        <%= pluralize(@user.views, "view") %> | 
+        <%= pluralize(@total_views, "Total Post View") %>
+      </h6>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-1">
+    </div>
+    <div class="col-10">
+       <% @posts.each do |post| %>
+    <div class = "col-4 card ">
+     <h4><%= post.title %></h4>
+      <h6>posted by <%= link_to post.user.full_name, user_path(post.user) %></h6>
+      <p >
+        <%= link_to "Show this post", post,class:"btn btn-primary" %>
+      </p>
+      </div>
+    <% end %>
+      <div class="col-1"></div>
+    </div>
+  </div>
+</div>

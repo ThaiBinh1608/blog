@@ -82,3 +82,12 @@ gem "bullet", "~> 7.0"
 gem "activerecord-import", "~> 1.4"
 
 gem "wicked", "~> 2.0"
+
+gem "stripe", "~> 8.5"
+gem "pay", "~> 6.5"
+
+gem "ahoy_matey", "~> 4.2"
+
+gem "groupdate", "~> 6.2"
+
+gem "chartkick", "~> 5.0"

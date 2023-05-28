@@ -70,6 +70,10 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.4)
       public_suffix (>= 2.0.2, < 6.0)
+    ahoy_matey (4.2.1)
+      activesupport (>= 5.2)
+      device_detector
+      safely_block (>= 0.2.1)
     bcrypt (3.1.18)
     bindex (0.8.1)
     bootsnap (1.16.0)
@@ -87,12 +91,14 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
+    chartkick (5.0.2)
     concurrent-ruby (1.2.2)
     crass (1.0.6)
     date (3.3.3)
     debug (1.8.0)
       irb (>= 1.5.0)
       reline (>= 0.3.1)
+    device_detector (1.1.0)
     devise (4.9.2)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -112,6 +118,8 @@ GEM
       activerecord (>= 4.0.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
+    groupdate (6.2.1)
+      activesupport (>= 5.2)
     http (5.1.1)
       addressable (~> 2.8)
       http-cookie (~> 1.0)
@@ -168,6 +176,8 @@ GEM
       http (>= 4.0.0)
       rails (>= 5.2.0)
     orm_adapter (0.5.0)
+    pay (6.5.0)
+      rails (>= 6.0.0)
     pg (1.5.3-x64-mingw-ucrt)
     public_suffix (5.0.1)
     puma (5.6.5)
@@ -217,6 +227,7 @@ GEM
     ruby-vips (2.1.4)
       ffi (~> 1.12)
     rubyzip (2.3.2)
+    safely_block (0.4.0)
     selenium-webdriver (4.9.1)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
@@ -230,6 +241,7 @@ GEM
       sprockets (>= 3.0.0)
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
+    stripe (8.5.0)
     thor (1.2.1)
     timeout (0.3.2)
     turbo-rails (1.4.0)
@@ -270,17 +282,21 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord-import (~> 1.4)
+  ahoy_matey (~> 4.2)
   bootsnap
   bullet (~> 7.0)
   capybara
+  chartkick (~> 5.0)
   debug
   devise
   faker
   friendly_id (~> 5.5)
+  groupdate (~> 6.2)
   image_processing (~> 1.2)
   importmap-rails
   jbuilder
   noticed (~> 1.6)
+  pay (~> 6.5)
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.3)
@@ -288,6 +304,7 @@ DEPENDENCIES
   selenium-webdriver
   sprockets-rails
   stimulus-rails
+  stripe (~> 8.5)
   turbo-rails
   tzinfo-data
   web-console

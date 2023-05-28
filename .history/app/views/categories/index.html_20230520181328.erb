@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Categories</h1>
+<%= link_to "New category", new_category_path ,class:"btn btn-primary"  %>
+<div id="categories" class="card mt-3">
+    <div class ="row ">
+        <% @categories.each do |category| %>
+            <div class = "col">
+          <h3><%= category.name %><h3>
+          <p>
+            <%= link_to "Show this category", category ,class:"btn btn-primary"  %>
+          </p>
+          </div>
+          <% end %>
+            </div>
+</div>
+
+
