@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Projects</h1>
+<p> Đây là trang chứa dự án </p>
+
+<div id="projects" class="container">
+  <% @projects.each do |project| %>
+      <h5><%=project.title%> <%= link_to "Xem dự án", project ,class:"btn btn-primary"  if current_user&.admin?  %></h5>
+      <span>Link:<%= link_to project.link %><span>
+     <div><%= project.body  %></div>
+   
+  <% end %>
+</div>
+
+

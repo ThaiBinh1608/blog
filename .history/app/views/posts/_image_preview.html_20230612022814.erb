@@ -1,0 +1,9 @@
+ <div data-controller="previews">
+
+    <%= form.label :image, style: "display: block" %>
+    <%= form.file_field :image,
+    direct_upload:true,
+    data:{ previews_target: "input", action: "change->previews#preview"} %>
+    <% if post.image.attached?%>
+      <% if post.image.attached?%>
+  </div>

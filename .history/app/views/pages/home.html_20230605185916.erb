@@ -1,0 +1,30 @@
+<div class="container card">
+  <h1>Chào mừng đến với ZuesBlog!!! <span class="text-success"></h1>
+
+ 
+</div>
+
+
+<% if current_user %>
+  <div class="container card mt-4">
+    <div class="card-actions mb-3">
+    <%= link_to "Profile", user_path(current_user),class:"btn btn-primary" %>
+    <%= link_to "Tạo bài viết", new_post_path ,class:"btn btn-primary"%>
+  </div>
+    <h3><%= current_user.full_name %></h3>
+    <div class="d-flex">
+   <div><%= image_tag(current_user.avatar, style:"width:150px; height: 150px; border-radius:100%") if current_user.avatar.attached? %></div>
+    <ul>
+      <li>Email: <%= current_user.email %></li>
+      <li>Xã/phường: <%= current_user.address.street.titleize %></li>
+      <li>Quận/huyện: <%= current_user.address.city.titleize %></li>
+      <li>Tỉnh/thành phố: <%= current_user.address.state.titleize %></li>
+      <li>Mã bưu chính: <%= current_user.address.zip %></li>
+      <li>Quốc gia: <%= current_user.address.country.titleize %></li>
+    </ul>
+    </div>
+  </div>
+
+    
+<% end %>
+ 
